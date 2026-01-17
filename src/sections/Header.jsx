@@ -1,5 +1,5 @@
 import Nav from "../components/nav";
-const Header = ({ Dark, setDark }) => {
+const Header = ({ Dark, setDark, TextColor }) => {
   return (
     <div
       className={`p-5 sticky top-0 shadow-lg ${
@@ -15,7 +15,7 @@ const Header = ({ Dark, setDark }) => {
           Portfolio
         </h1>
         <div className="flex gap-10 justify-center  items-center">
-          <Nav Dark={Dark} />
+          <Nav TextColor={TextColor} />
           <div className="flex items-center outline-2 outline-blue-300 rounded-full">
             <div
               onClick={() => setDark(!Dark)}
@@ -29,9 +29,9 @@ const Header = ({ Dark, setDark }) => {
               </span>
 
               <div
-                className={`absolute top-0.5 left-0.5 w-8 h-8 ${
+                className={`absolute top-0.5 left-0.5 w-8 h-8  ${
                   Dark ? "bg-white" : "bg-gray-700"
-                } rounded-full shadow-md transition-transform duration-300 ${
+                } rounded-full shadow-lg  transition-transform duration-300 ${
                   Dark ? "translate-x-8" : "translate-x-0"
                 }`}
               ></div>
