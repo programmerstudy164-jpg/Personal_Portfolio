@@ -1,21 +1,17 @@
 import React from "react";
 import { MdVerified } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
-const Home = ({ Dark, TextColor }) => {
+const Home = ({ TextColor, bg }) => {
   return (
-    <div
-      className={`h-screen flex justify-center ${
-        Dark ? "bg-bg-primary" : "bg-white"
-      }`}
-    >
-      <div className="max-w-4xl w-full flex justify-center items-center mx-10 mb-10 mt-5">
+    <div id="home" className={`h-screen flex justify-center ${bg}`}>
+      <div className="max-w-4xl w-full flex justify-center items-center mx-10">
         <div className=" flex flex-col  justify-center items-center gap-5">
-          <div className="flex gap-3 items-center">
+          <div className="flex gap-3  items-center">
             <h1 className="text-5xl text-text-primary font-bold animate-fadeIn">
               Hi, I'M Rhine Marco Quibra
             </h1>
 
-            <MdVerified className="w-5 h-5 text-text-primary" />
+            <MdVerified className="w-5 h-5 mt-2 text-text-primary" />
           </div>
           <div className="flex gap-2">
             <SlLocationPin className={`${TextColor} w-8 h-8`} />
