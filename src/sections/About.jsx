@@ -2,7 +2,7 @@ import React from "react";
 
 const About = ({ TextColor, bg }) => {
   return (
-    <div className={`h-screen flex justify-center ${bg}`}>
+    <div id="about" className={`h-screen flex justify-center ${bg}`}>
       <div className="w-full max-w-4xl flex flex-col  items-center gap-15 pt-40">
         <h1 className={`font-bold text-4xl text-center ${TextColor}`}>
           About Me
