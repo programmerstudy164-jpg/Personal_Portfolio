@@ -1,3 +1,13 @@
+# EL 302 – Web Application and Technologies
+
+Name: Rhine Marco Quibra 
+Course/Section: BSIT-3
+ 
+
+Subject EL 302 – Web Application and Technologies.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
