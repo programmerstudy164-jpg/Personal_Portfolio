@@ -2,19 +2,27 @@ import Nav from "../components/Nav";
 const Header = ({ Dark, setDark, TextColor }) => {
   return (
     <div
-      className={`p-5 sticky top-0 shadow-lg ${
-        Dark ? "bg-gray-800" : "bg-gray-100"
+      className={`py-5 sticky top-0 shadow-lg ${
+        Dark ? "bg-gray-800" : "bg-gray-100 "
       }`}
     >
-      <div className="flex justify-between items-center mx-7">
+      <div className="flex justify-between items-center mx-4">
+           <button
+          className={`flex md:hidden  text-2xl ${Dark? "text-white":"text-black"}`}
+         
+        >
+          ☰
+        </button>
         <h1
-          className={`Logo font-sans font-semibold text-3xl ${
+          className={`Logo font-sans font-semibold text-3xl md:flex hidden ${
             Dark ? " text-text-primary" : " text-black"
           }`}
         >
           Portfolio
         </h1>
-        <div className="flex gap-10 justify-center  items-center">
+         
+        
+        <div className="flex gap-10 justify-center  items-center  md:flex hidden ">
           <Nav TextColor={TextColor} />
           <div className="flex items-center outline-2 outline-blue-300 rounded-full">
             <div
@@ -37,7 +45,9 @@ const Header = ({ Dark, setDark, TextColor }) => {
               ></div>
             </div>
           </div>
+          
         </div>
+       
       </div>
     </div>
   );
