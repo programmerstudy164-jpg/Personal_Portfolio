@@ -12,14 +12,14 @@ const Project = ({ TextColor, bg, dark }) => {
     <SiMysql className="w-9 h-9 text-blue-700" />,
   ];
   return (
-    <div id="project" className={`h-screen flex justify-center ${bg}`}>
-      <div className="w-full max-w-4xl flex flex-col  pt-24 items-center gap-15 ">
+    <div id="project" className={`min-h-screen flex justify-center ${bg}`}>
+      <div className="w-full max-w-4xl  flex flex-col  pt-24 items-center gap-15 ">
         <h1 className={`font-bold text-4xl text-center ${TextColor}`}>
           My Project
         </h1>
         <div className=" w-full max-w-2xl flex items-center flex-col">
           <div
-            className={`w-1/2 p-3  ${dark ? "border-2 border-blue-600" : "shadow-2xl"}  overflow-auto rounded-lg `}
+            className={`w-3/4 p-3  ${dark ? "border-2 border-blue-600" : "shadow-2xl"}  overflow-auto rounded-lg `}
           >
             <div className="rounded-lg overflow-auto">
               <img
