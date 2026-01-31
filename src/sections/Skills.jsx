@@ -43,12 +43,12 @@ const Skills = ({ TextColor, bg, dark }) => {
     },
   ];
   return (
-    <div id="skills" className={`h-screen flex justify-center ${bg}`}>
+    <div id="skills" className={`min-h-screen flex justify-center ${bg}`}>
       <div className=" flex flex-col items-center gap-20 pt-32 w-full">
         <h1 className={`font-bold text-4xl text-center ${TextColor}`}>
           Skills
         </h1>
-        <div className="max-w-7xl w-full grid grid-cols-3 gap-5">
+        <div className="max-w-7xl w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  gap-5 p-5">
           {Skills.map((item) => (
             <SkillsCard
               category={item.Category}
