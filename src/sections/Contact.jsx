@@ -4,9 +4,9 @@ const Contact = ({ TextColor, bg, dark }) => {
   return (
     <section
       id="contact"
-      className={`min-h-screen flex items-center ${bg} justify-center px-6`}
+      className={`min-h-screen flex items-center justify-center ${bg} justify-center px-6`}
     >
-      <div className="w-full max-w-4xl grid md:grid-cols-2 gap-10">
+      <div className="w-full max-w-4xl grid md:grid-cols-2 m-3 gap-10">
         <div>
           <h2 className={`text-4xl ${TextColor} font-bold mb-4`}>Contact Me</h2>
           <p className={`text-gray-600 ${TextColor} mb-6`}>
@@ -21,7 +21,7 @@ const Contact = ({ TextColor, bg, dark }) => {
           </ul>
         </div>
 
-        <form className="flex flex-col gap-4 ">
+        <form className="flex flex-col gap-4 mr-5">
           <input
             type="text"
             placeholder="Your Name"
