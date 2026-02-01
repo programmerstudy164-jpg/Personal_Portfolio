@@ -6,7 +6,7 @@ const Home = ({ TextColor, bg }) => {
   return (
     <div id="home" className={`min-h-screen flex justify-center ${bg}`}>
       <div className="max-w-4xl w-full flex justify-center items-center">
-        <div className=" flex flex-col items-center gap-5">
+        <div className=" flex flex-col items-center gap-5 m-3">
         
   <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-text-primary font-bold animate-fadeIn flex flex-wrap justify-center items-center gap-2">
 
