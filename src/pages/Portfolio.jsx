@@ -6,8 +6,10 @@ import Project from "../sections/Project";
 import Skills from "../sections/Skills";
 import Footer from "../sections/Footer";
 import Contact from "../sections/Contact";
+import Sidebar from "../components/sidebar";
 
 const Portfolio = () => {
+  const [isOpen, setOpen] = useState(false)
   const [isDark, setIsDark] = useState(() => localStorage.theme === "dark");
 
   useEffect(() => {
@@ -22,14 +24,18 @@ const Portfolio = () => {
   const Text = isDark ? "text-gray-300" : "text-black";
   const bgColor = isDark ? "bg-bg-primary" : "bg-white";
   return (
-    <div>
-      <Header Dark={isDark} setDark={setIsDark} TextColor={Text} />
+    <div className="flex min-h-screen">
+      <Sidebar bg={bgColor} isOpen={isOpen} setOpen={setOpen} Dark={isDark} setDark={setIsDark}/>
+    <div className="flex-1">
+      
+      <Header Dark={isDark} setDark={setIsDark}  setOpen={setOpen}/>
       <Home TextColor={Text} bg={bgColor} />
       <About TextColor={Text} bg={bgColor} />
       <Project TextColor={Text} bg={bgColor} dark={isDark} />
       <Skills TextColor={Text} bg={bgColor} dark={isDark} />
       <Contact TextColor={Text} bg={bgColor} dark={isDark} />
       <Footer TextColor={Text} bg={bgColor} dark={isDark} />
+    </div>
     </div>
   );
 };
