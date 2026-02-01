@@ -21,7 +21,7 @@ const Contact = ({ TextColor, bg, dark }) => {
           </ul>
         </div>
 
-        <form className="flex flex-col gap-4 mr-5">
+        <form className="flex flex-col gap-4">
           <input
             type="text"
             placeholder="Your Name"
