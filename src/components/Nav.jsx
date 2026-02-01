@@ -8,7 +8,7 @@ const navItems = [
   { name: "Contact", id: "contact" },
 ];
 
-const Nav = ({ TextColor }) => {
+const Nav = ({display,gap,setOpen }) => {
   const [activeSection, setActiveSection] = useState("home");
 
   const handleScroll = (id) => {
@@ -21,10 +21,11 @@ const Nav = ({ TextColor }) => {
       navItems.forEach((item) => {
         const section = document.getElementById(item.id);
         if (!section) return;
-
+        
         const rect = section.getBoundingClientRect();
         if (rect.top <= 150 && rect.bottom >= 150) {
           setActiveSection(item.id);
+          setOpen(false)
         }
       });
     };
@@ -34,7 +35,7 @@ const Nav = ({ TextColor }) => {
   }, []);
 
   return (
-    <ul className="flex gap-8">
+    <ul className={`${display} ${gap}`}>
       {navItems.map((item) => (
         <li
           key={item.id}
@@ -44,7 +45,7 @@ const Nav = ({ TextColor }) => {
             ${
               activeSection === item.id ?
                 "text-text-primary border-b-2 border-text-primary"
-              : `text-gray-500 hover:text-text-primary ${TextColor}`
+              : `text-gray-500 hover:text-text-primary`
             }
           `}
         >
