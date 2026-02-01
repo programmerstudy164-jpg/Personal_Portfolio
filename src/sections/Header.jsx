@@ -1,5 +1,6 @@
+import DarkMode from "../components/DarkMode";
 import Nav from "../components/Nav";
-const Header = ({ Dark, setDark, TextColor }) => {
+const Header = ({ Dark, setDark,setOpen }) => {
   return (
     <div
       className={`py-5 sticky top-0 shadow-lg ${
@@ -8,8 +9,8 @@ const Header = ({ Dark, setDark, TextColor }) => {
     >
       <div className="flex justify-between items-center mx-4">
            <button
-          className={`flex md:hidden  text-2xl ${Dark? "text-white":"text-black"}`}
-         
+          className={`flex cursor-pointer md:hidden  text-2xl ${Dark? "text-white":"text-black"}`}
+            onClick={() => setOpen(true)}
         >
           ☰
         </button>
@@ -23,28 +24,10 @@ const Header = ({ Dark, setDark, TextColor }) => {
          
         
         <div className="flex gap-10 justify-center  items-center  md:flex hidden ">
-          <Nav TextColor={TextColor} />
-          <div className="flex items-center outline-2 outline-blue-300 rounded-full">
-            <div
-              onClick={() => setDark(!Dark)}
-              className="relative w-18 h-10 bg-gray-300 dark:bg-gray-700 rounded-full cursor-pointer transition-colors border-2 border-white"
-            >
-              <span className="absolute left-2 top-1/2 -translate-y-1/2 text-yellow-400">
-                ☀️
-              </span>
-              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-blue-400">
-                🌙
-              </span>
-
-              <div
-                className={`absolute top-0.5 left-0.5 w-8 h-8  ${
-                  Dark ? "bg-white" : "bg-gray-700"
-                } rounded-full shadow-lg  transition-transform duration-300 ${
-                  Dark ? "translate-x-8" : "translate-x-0"
-                }`}
-              ></div>
-            </div>
-          </div>
+       
+            <Nav display={"flex"} gap={"space-x-10"} setOpen={setOpen}/>
+      
+           <DarkMode Dark={Dark} setDark={setDark}/>
           
         </div>
        
