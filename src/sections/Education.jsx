@@ -51,7 +51,7 @@ const Education = ({ TextColor, bg, dark }) => {
 
         </div>
       </div>
-
+  
     </section>
   )
 }

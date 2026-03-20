@@ -55,6 +55,7 @@ const Nav = ({display,gap,setOpen }) => {
       ))}
     </ul>
   );
+  
 };
 
 export default Nav;
