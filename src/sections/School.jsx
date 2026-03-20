@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Education = ({ TextColor, bg, dark }) => {
+const School = ({ TextColor, bg, dark }) => {
   return (
+    
     <section id='education' className={`min-h-screen flex items-center justify-center px-4  ${bg}`}>
       
       <div className={`${bg} p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-xl ${dark ? "border-2 border-blue-600" : "shadow-2xl"}`}>
@@ -54,6 +55,7 @@ const Education = ({ TextColor, bg, dark }) => {
   
     </section>
   )
+  
 }
 
-export default Education
+export default School

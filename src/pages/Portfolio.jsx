@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import School from "../sections/School";
 import Home from "../sections/Home";
 import About from "../sections/About";
 import Header from "../sections/Header";
@@ -7,7 +8,7 @@ import Skills from "../sections/Skills";
 import Footer from "../sections/Footer";
 import Contact from "../sections/Contact";
 import SideBar from "../components/SlideBar";
-import Education from "../sections/education";
+
 
 
 const Portfolio = () => {
@@ -35,7 +36,7 @@ const Portfolio = () => {
       <Header Dark={isDark} setDark={setIsDark}  setOpen={setOpen}/>
       <Home TextColor={Text} bg={bgColor} />
       <About TextColor={Text} bg={bgColor} />
-      <Education TextColor={Text} bg={bgColor} dark={isDark}/>
+      <School TextColor={Text} bg={bgColor} dark={isDark}/>
       <Project TextColor={Text} bg={bgColor} dark={isDark} />
       <Skills TextColor={Text} bg={bgColor} dark={isDark} />
       <Contact TextColor={Text} bg={bgColor} dark={isDark} />
