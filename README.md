@@ -1,10 +1,10 @@
-# EL 302 – Web Application and Technologies
+
 
 Name: Rhine Marco Quibra 
-Course/Section: BSIT-3
+Course/Section: BSIT-2
  
 
-Subject EL 302 – Web Application and Technologies.
+
 
 ---
 
